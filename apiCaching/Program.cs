@@ -11,6 +11,8 @@ builder.Services.AddEntityFrameworkNpgsql().AddDbContext<ApiDbContext>(opt =>
 opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
+builder.Services.AddScoped<ICacheService,CacheService>();
+
 
 
 
